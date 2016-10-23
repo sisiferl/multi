@@ -8,6 +8,9 @@ all: multi_client
 multi_client: $(SRC_FILES)
 	$(CC) $(CFLAGS) -o $@ $^ $(LIBS)
 
+install:
+	cp multi_client /home/air/Projects/air/build/
+
 clean:
 	rm -f multi_client *.o
 

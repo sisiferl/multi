@@ -543,7 +543,7 @@ void multi_dhcp_parse_dhcp_msg(struct multi_dhcp_info *di,
 
                 /* Not exactly sure what to do in this case */                
                 assert(t_diff < di->t1 || t_diff < di->t2);
-                assert(di->t1 < di->t2);
+                assert(di->t1 <= di->t2); //sfo from < to <=
 
                 /* Lease is from WHEN the request was sent */
                 di->lease -= t_diff;
